@@ -7,6 +7,6 @@ Echoe.new('rapleaf_api', '0.0.1') do |p|
   p.description    = "A library for interacting with Rapleaf's Personalization API."
   p.email          = 'developer @nospam@ rapleaf.com'
   p.ignore_pattern = ["tmp/*"]
-  p.development_dependencies = ['echoe', 'json']
+  p.development_dependencies = ['echoe']
   p.runtime_dependencies = ['json']
 end

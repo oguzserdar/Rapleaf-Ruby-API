@@ -9,19 +9,19 @@ This gem depends on the "json" gem.
 
 Usage
 -----
-  > require 'rapleaf_api'
-  => true
-  > api = RapleafApi::Api.new('my secret API key')
-  => #<RapleafApi::Api:0x101b7f5f0 @API_KEY="my secret API key", @CA_PATH=nil, @TIMEOUT=2, @BASE_PATH="/v4/dr?api_key=my secret API key">
-  > h = api.query_by_email('test@example.com')
-  => {"location"=>"Fakesville, California, United States", "gender"=>"Male", "age"=>"25-34"}
+    > require 'rapleaf_api'
+    => true
+    > api = RapleafApi::Api.new('my secret API key')
+    => #<RapleafApi::Api:0x101b7f5f0 @API_KEY="my secret API key", @CA_PATH=nil, @TIMEOUT=2, @BASE_PATH="/v4/dr?api_key=my secret API key">
+    > h = api.query_by_email('test@example.com')
+    => {"location"=>"Fakesville, California, United States", "gender"=>"Male", "age"=>"25-34"}
 
 Constructor Options
 -------------------
 You can pass in an options hash to the API constructor, like so:
 
-  > api = RapleafApi::Api.new('my secret API key', :timeout => 10)
-  => #<RapleafApi::Api:0x101b7f5f0 @API_KEY="my secret API key", @CA_PATH=nil, @TIMEOUT=10, @BASE_PATH="/v4/dr?api_key=my secret API key">
+    > api = RapleafApi::Api.new('my secret API key', :timeout => 10)
+    => #<RapleafApi::Api:0x101b7f5f0 @API_KEY="my secret API key", @CA_PATH=nil, @TIMEOUT=10, @BASE_PATH="/v4/dr?api_key=my secret API key">
 
 The possible options/keys accepted by the constructor are:
 

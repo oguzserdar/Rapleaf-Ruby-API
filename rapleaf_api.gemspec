@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.date = %q{2011-03-09}
   s.description = %q{A library for interacting with Rapleaf's Personalization API.}
   s.email = %q{developer @nospam@ rapleaf.com}
-  s.extra_rdoc_files = ["CHANGELOG", "LICENSE", "README", "lib/rapleaf_api.rb"]
-  s.files = ["CHANGELOG", "LICENSE", "Manifest", "README", "Rakefile", "lib/rapleaf_api.rb", "rapleaf_api.gemspec"]
+  s.extra_rdoc_files = ["CHANGELOG", "LICENSE", "README.md", "lib/rapleaf_api.rb"]
+  s.files = ["CHANGELOG", "LICENSE", "Manifest", "README.md", "Rakefile", "lib/rapleaf_api.rb", "rapleaf_api.gemspec"]
   s.homepage = %q{http://rapleaf_api.github.com/rapleaf_api/}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Rapleaf_api", "--main", "README.md"]
   s.require_paths = ["lib"]

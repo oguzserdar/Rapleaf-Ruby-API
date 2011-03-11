@@ -31,14 +31,15 @@ module RapleafApi
       @API_KEY = api_key
       @BASE_PATH = "/v4/dr?api_key=#{@API_KEY}"
       @TIMEOUT = options[:timeout] || 2
-      @CA_PATH = options[:ca_path] # set to your system-wide root ca cert path if you're having ssl verification issues
+      @CA_PATH = options[:ca_path] # set to your system-wide root ca cert path 
+                                   # if you're having ssl verification issues
     end
   
     # Takes an e-mail and returns a hash which maps attribute fields onto attributes
     # Options:
     #  :hash_email     - the email will be hashed before it's sent to Rapleaf
-    #  :show_available - return the string "Data Available" for fields the API account is not subscribed to
-    #                    but for which Rapleaf has data
+    #  :show_available - return the string "Data Available" for fields the API 
+    #                    account is not subscribed to but for which Rapleaf has data
     def query_by_email(email, options = {})
       if options[:hash_email]
         query_by_sha1(Digest::SHA1.hexdigest(email), :show_available => options[:show_available])
@@ -65,8 +66,9 @@ module RapleafApi
     # and returns a hash which maps attribute fields onto attributes
     # Options:
     #  :email          - query with an email to increase the hit rate
-    #  :show_available - return the string "Data Available" for fields the API account is not subscribed to
-    #                    but for which Rapleaf has data
+    #  :show_available - return the string "Data Available" for fields 
+    #                    the API account is not subscribed to but for 
+    #                    which Rapleaf has data
     def query_by_nap(first, last, street, city, state, options = {})
       if options[:email]
         url = "#{@BASE_PATH}&email=#{url_encode(options[:email])}&first=#{url_encode(first)}&last=#{url_encode(last)}" +
@@ -83,8 +85,9 @@ module RapleafApi
     # and returns a hash which maps attribute fields onto attributes
     # Options:
     #  :email          - query with an email to increase the hit rate
-    #  :show_available - return the string "Data Available" for fields the API account is not subscribed to
-    #                    but for which Rapleaf has data
+    #  :show_available - return the string "Data Available" for fields 
+    #                    the API account is not subscribed to but for 
+    #                    which Rapleaf has data
     def query_by_naz(first, last, zip4, options = {})
       if options[:email]
         url = "#{@BASE_PATH}&email=#{url_encode(options[:email])}&first=#{url_encode(first)}&last=#{url_encode(last)}&zip4=#{zip4}"

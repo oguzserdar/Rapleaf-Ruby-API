@@ -2,7 +2,7 @@ require 'rubygems'
 require 'rake'
 require 'echoe'
 
-Echoe.new('rapleaf_api', '0.1.0') do |p|
+Echoe.new('rapleaf_api', '0.1.1') do |p|
   p.author         = 'Rapleaf'
   p.description    = "A library for interacting with Rapleaf's Personalization API."
   p.email          = 'developer @nospam@ rapleaf.com'

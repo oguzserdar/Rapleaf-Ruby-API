@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email = %q{developer @nospam@ rapleaf.com}
   s.extra_rdoc_files = ["CHANGELOG", "LICENSE", "README.md", "lib/rapleaf_api.rb"]
   s.files = ["CHANGELOG", "LICENSE", "Manifest", "README.md", "Rakefile", "lib/rapleaf_api.rb", "rapleaf_api.gemspec"]
-  s.homepage = %q{http://rapleaf_api.github.com/rapleaf_api/}
+  s.homepage = %q{http://www.rapleaf.com}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Rapleaf_api", "--main", "README.md"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{rapleaf_api}

@@ -1,4 +1,6 @@
-v1.2.0 Bump version number to match User-Agent
+v1.2.1. Support ca_file instead of ca_path in constructor
+
+v1.2.0. Bump version number to match User-Agent
 
 v0.1.1. Bug fixes
 

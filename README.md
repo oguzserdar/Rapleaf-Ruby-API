@@ -12,7 +12,7 @@ Usage
     > require 'rapleaf_api'
     => true
     > api = RapleafApi::Api.new('my secret API key')
-    => #<RapleafApi::Api:0x101b7f5f0 @API_KEY="my secret API key", @CA_PATH=nil, @TIMEOUT=2, @BASE_PATH="/v4/dr?api_key=my secret API key">
+    => #<RapleafApi::Api:0x101b7f5f0 @API_KEY="my secret API key", @CA_FILE=nil, @TIMEOUT=2, @BASE_PATH="/v4/dr?api_key=my secret API key">
     > h = api.query_by_email('test@example.com')
     => {"location"=>"Fakesville, California, United States", "gender"=>"Male", "age"=>"25-34"}
 
@@ -21,12 +21,12 @@ Constructor Options
 You can pass in an options hash to the API constructor, like so:
 
     > api = RapleafApi::Api.new('my secret API key', :timeout => 10)
-    => #<RapleafApi::Api:0x101b7f5f0 @API_KEY="my secret API key", @CA_PATH=nil, @TIMEOUT=10, @BASE_PATH="/v4/dr?api_key=my secret API key">
+    => #<RapleafApi::Api:0x101b7f5f0 @API_KEY="my secret API key", @CA_FILE=nil, @TIMEOUT=10, @BASE_PATH="/v4/dr?api_key=my secret API key">
 
 The possible options/keys accepted by the constructor are:
 
  - :timeout => The max amount of time to wait for a request to finish. Defaults to 2.
- - :ca_path => Set this to your system-wide root CA cert path if you're having SSL verification issues. Defaults to nil.
+ - :ca_file => Set this to your system-wide root CA cert path if you're having SSL verification issues. Defaults to nil.
  
 Query Options
 -------------

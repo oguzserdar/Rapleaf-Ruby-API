@@ -31,7 +31,7 @@ module RapleafApi
       @API_KEY = api_key
       @BASE_PATH = "/v4/dr?api_key=#{@API_KEY}"
       @TIMEOUT = options[:timeout] || 2
-      @CA_PATH = options[:ca_path] # set to your system-wide root ca cert path 
+      @CA_FILE = options[:ca_file] # set to your system-wide root ca cert file 
                                    # if you're having ssl verification issues
     end
   
@@ -124,7 +124,7 @@ module RapleafApi
       unless defined?(@@http_client)
         @@http_client = Net::HTTP.new(HOST, PORT)
         @@http_client.use_ssl = true
-        @@http_client.ca_path = @CA_PATH if @CA_PATH
+        @@http_client.ca_file = @CA_FILE if @CA_FILE
         @@http_client.verify_mode = OpenSSL::SSL::VERIFY_PEER
         @@http_client.start
       end

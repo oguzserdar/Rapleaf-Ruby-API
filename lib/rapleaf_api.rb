@@ -24,7 +24,7 @@ include ERB::Util
 module RapleafApi
   HOST = "personalize.rapleaf.com"
   PORT = 443
-  HEADERS = {'User-Agent' => 'RapleafApi/Ruby/1.2.0'}
+  HEADERS = {'User-Agent' => 'RapleafApi/Ruby/1.2.1'}
 
   class Api
     def initialize(api_key, options = {})

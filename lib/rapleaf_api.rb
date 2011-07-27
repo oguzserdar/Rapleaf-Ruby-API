@@ -33,6 +33,7 @@ module RapleafApi
       @TIMEOUT = options[:timeout] || 2
       @CA_FILE = options[:ca_file] # set to your system-wide root ca cert file 
                                    # if you're having ssl verification issues
+      @VERIFY_MODE = options[:verify_mode] || OpenSSL::SSL::VERIFY_PEER # specify OpenSSL verify mode
     end
   
     # Takes an e-mail and returns a hash which maps attribute fields onto attributes
@@ -125,7 +126,7 @@ module RapleafApi
         @@http_client = Net::HTTP.new(HOST, PORT)
         @@http_client.use_ssl = true
         @@http_client.ca_file = @CA_FILE if @CA_FILE
-        @@http_client.verify_mode = OpenSSL::SSL::VERIFY_PEER
+        @@http_client.verify_mode = @VERIFY_MODE 
         @@http_client.start
       end
       @@http_client
